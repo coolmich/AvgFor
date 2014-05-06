@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Users/Jacob/android_apps/avgcopy/library/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/Jacob/android_apps/avgcopy/library/src/debug/assets" />
+    </dataSet>
+
+</merger>
