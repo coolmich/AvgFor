@@ -10,13 +10,13 @@ public class AFCourseActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_af_list_container);
+		setContentView(R.layout.container_with_padding);
 
 		FragmentManager fm = getSupportFragmentManager();
-		Fragment fragment = fm.findFragmentById(R.id.pure_list_container);
+		Fragment fragment = fm.findFragmentById(R.id.pure_list_container_with_padding);
 		if(fragment == null){
 			fragment = new AFCourseFragment();
-			fm.beginTransaction().add(R.id.pure_list_container,fragment).commit();
+			fm.beginTransaction().add(R.id.pure_list_container_with_padding,fragment).commit();
 			
 		}
 		int titleId = getResources().getIdentifier("action_bar_title", "id",
