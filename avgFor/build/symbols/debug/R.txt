@@ -403,6 +403,7 @@ int layout activity_af_list_container 0x7f030018
 int layout class_list_item 0x7f030019
 int layout container_with_padding 0x7f03001a
 int layout fragment_afsubject 0x7f03001b
+<<<<<<< HEAD
 int layout login 0x7f03001c
 int layout login_page 0x7f03001d
 int layout menu_frame 0x7f03001e
@@ -415,6 +416,16 @@ int layout signup_page 0x7f030024
 int layout slidingmenumain 0x7f030025
 int layout support_simple_spinner_dropdown_item 0x7f030026
 int layout two_line_item 0x7f030027
+=======
+int layout menu_frame 0x7f03001c
+int layout menu_row 0x7f03001d
+int layout seat_info_row 0x7f03001e
+int layout seat_info_row_red 0x7f03001f
+int layout seat_title_row 0x7f030020
+int layout slidingmenumain 0x7f030021
+int layout support_simple_spinner_dropdown_item 0x7f030022
+int layout two_line_item 0x7f030023
+>>>>>>> a75374f0ccdb0c29297e08c8eadbe54f8c63a492
 int menu afseat 0x7f0c0000
 int menu afsubject 0x7f0c0001
 int string Signin 0x7f0a0000

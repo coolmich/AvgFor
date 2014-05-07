@@ -1201,6 +1201,7 @@ containing a value of this type.
         public static final int class_list_item=0x7f030019;
         public static final int container_with_padding=0x7f03001a;
         public static final int fragment_afsubject=0x7f03001b;
+<<<<<<< HEAD
         public static final int login=0x7f03001c;
         public static final int login_page=0x7f03001d;
         public static final int menu_frame=0x7f03001e;
@@ -1213,6 +1214,16 @@ containing a value of this type.
         public static final int slidingmenumain=0x7f030025;
         public static final int support_simple_spinner_dropdown_item=0x7f030026;
         public static final int two_line_item=0x7f030027;
+=======
+        public static final int menu_frame=0x7f03001c;
+        public static final int menu_row=0x7f03001d;
+        public static final int seat_info_row=0x7f03001e;
+        public static final int seat_info_row_red=0x7f03001f;
+        public static final int seat_title_row=0x7f030020;
+        public static final int slidingmenumain=0x7f030021;
+        public static final int support_simple_spinner_dropdown_item=0x7f030022;
+        public static final int two_line_item=0x7f030023;
+>>>>>>> a75374f0ccdb0c29297e08c8eadbe54f8c63a492
     }
     public static final class menu {
         public static final int afseat=0x7f0c0000;
