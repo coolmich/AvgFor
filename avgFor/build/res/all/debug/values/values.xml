@@ -587,6 +587,13 @@
     <eat-comment />
 
     <integer name="abc_max_action_buttons">2</integer>
+    <!-- From: file:/Users/White/Documents/Project/AvgFor/avgFor/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="Signin">Sign in</string>
+    <string name="Signup">Sign up</string>
+    <!-- From: file:/Users/White/Documents/Project/AvgFor/avgFor/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <eat-comment />
 
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
@@ -608,6 +615,8 @@
     <string name="add_class">Add Class</string>
     <string name="app_name">AvgFor</string>
     <string name="cancel">Cancel</string>
+    <string name="editT1">Username</string>
+    <string name="editT2">Password</string>
     <string name="feedback">FEEDBACK</string>
     <string name="hello_world">Hello world!</string>
     <string name="help">HELP</string>

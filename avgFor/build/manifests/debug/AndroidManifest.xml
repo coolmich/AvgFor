@@ -7,12 +7,16 @@
     <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19"/>
 
     <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
-        <activity android:label="@string/app_name" android:name="com.antedeluvia.avgfor.AFSeatActivity">
+        <activity android:label="@string/app_name" android:name="com.antedeluvia.avgfor.AFLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.antedeluvia.avgfor.AFSeatActivity">
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.antedeluvia.avgfor.AFSignupActivity">
         </activity>
         <activity android:label="@string/app_name" android:name="com.antedeluvia.avgfor.AFCourseActivity">
         </activity>
