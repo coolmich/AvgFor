@@ -2,14 +2,14 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/Jacob/android_apps/avgcopy/library/src/main/res" >
+        <source path="/Users/White/Documents/Project/AvgFor/library/src/main/res" >
             <file
                 name="slidingmenumain"
-                path="/Users/Jacob/android_apps/avgcopy/library/src/main/res/layout/slidingmenumain.xml"
+                path="/Users/White/Documents/Project/AvgFor/library/src/main/res/layout/slidingmenumain.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                path="/Users/Jacob/android_apps/avgcopy/library/src/main/res/values/attrs.xml"
+                path="/Users/White/Documents/Project/AvgFor/library/src/main/res/values/attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="SlidingMenu" >
                     <attr name="mode" >
@@ -78,18 +78,18 @@
                 </declare-styleable>
             </file>
             <file
-                path="/Users/Jacob/android_apps/avgcopy/library/src/main/res/values/ids.xml"
+                path="/Users/White/Documents/Project/AvgFor/library/src/main/res/values/ids.xml"
                 qualifiers="" >
                 <item
                     name="selected_view"
                     type="id"/>
             </file>
         </source>
-        <source path="/Users/Jacob/android_apps/avgcopy/library/build/res/rs/release" />
-        <source path="/Users/Jacob/android_apps/avgcopy/library/build/res/generated/release" />
+        <source path="/Users/White/Documents/Project/AvgFor/library/build/res/rs/release" />
+        <source path="/Users/White/Documents/Project/AvgFor/library/build/res/generated/release" />
     </dataSet>
     <dataSet config="release" >
-        <source path="/Users/Jacob/android_apps/avgcopy/library/src/release/res" />
+        <source path="/Users/White/Documents/Project/AvgFor/library/src/release/res" />
     </dataSet>
 
 </merger>

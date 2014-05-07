@@ -3,11 +3,14 @@ package com.antedeluvia.avgfor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.ListFragment;
@@ -143,10 +146,10 @@ public class AFClassFragment extends ListFragment {
 	    }
 	}
 
-    private class AFClassHttpPostTask extends AsyncTask<String, Integer, String>{
+    private class AFClassHttpPostTask extends AsyncTask<List<NameValuePair>, Integer, String>{
         @Override
-        protected String doInBackground(String... params){
-            InputStream input = AFGeneralHttpTask.postAddClass(params[0], params[1]);
+        protected String doInBackground(List<NameValuePair>... params){
+            InputStream input = AFGeneralHttpTask.postAddClass(params[0]);
             try {
                 return AFGeneralHttpTask.convertInputStreamToString(input);
             }catch (IOException e){
@@ -177,16 +180,20 @@ public class AFClassFragment extends ListFragment {
 	               }).setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
 	                   public void onClick(DialogInterface dialog, int id) {
 	                       // FIRE ZE MISSILES!
-                           JSONObject jsObj = new JSONObject();
+                           //JSONObject jsObj = new JSONObject();
+                           List<NameValuePair> postaddclass = new ArrayList<NameValuePair>(2);
                            try {
-                               jsObj.put("cls_id",mClass.getmId());
-                               jsObj.put("user_id","22");
+                               //jsObj.put("user_id","22");
+                               //jsObj.put("cls_id",mClass.getmId());
+                               postaddclass.add(new BasicNameValuePair("user_id", "22"));
+                               postaddclass.add(new BasicNameValuePair("cls_id", mClass.getmId()));
 
-                           } catch (JSONException e) {
+                           } catch (Exception e) {
                                e.printStackTrace();
                                System.err.println("json created failed");
                            }
-                           new AFClassHttpPostTask().execute("http://avgfor.com/api/together/create",jsObj.toString());
+                           //new AFClassHttpPostTask().execute("http://avgfor.com/api/together/create",jsObj.toString());
+                           new AFClassHttpPostTask().execute(postaddclass);
 	                	   System.err.println("yes clicked");
 	                   }
 	               });
