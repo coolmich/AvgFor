@@ -19,7 +19,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -100,6 +100,21 @@ public class AFClassFragment extends ListFragment {
 			System.out.println(((com.antedeluvia.avgfor.AFClass) item).getDay());
 			TextView timeView = (TextView) convertView.findViewById(R.id.class_time);
 			timeView.setText(((com.antedeluvia.avgfor.AFClass) item).getTime());
+            // configure image
+            ImageView imageView = (ImageView)convertView.findViewById(R.id.class_pic);
+            if(((com.antedeluvia.avgfor.AFClass) item).getType().equals("Lecture")){
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.lecture));
+            }else if(((com.antedeluvia.avgfor.AFClass) item).getType().equals("Discussion")){
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.discussion));
+            }else if(((com.antedeluvia.avgfor.AFClass) item).getType().equals("Laboratory")){
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.lab));
+            }else if(((com.antedeluvia.avgfor.AFClass) item).getType().equals("tutorial")){
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.tutorial));
+            }else if(((com.antedeluvia.avgfor.AFClass) item).getType().equals("Seminar")){
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.seminar));
+            }else{
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.other));
+            }
 			return convertView;
 		}	
 	}

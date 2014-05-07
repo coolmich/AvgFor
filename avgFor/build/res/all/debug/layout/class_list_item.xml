@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:id="@+id/add_class_row"
+    android:background="@color/pale"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
     android:orientation="horizontal" >
     
     <ImageView
         android:id="@+id/class_pic"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:src="@drawable/ic_launcher" />
+        android:layout_weight="1" />
     
     <LinearLayout
         android:layout_width="0dp"
@@ -22,13 +25,14 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:fontFamily="sans-serif"
-              android:textSize="20sp"
-              android:paddingLeft="20dp"/>
+              android:textSize="17sp"
+              android:paddingLeft="10dp"/>
 		<TextView android:id="@+id/class_professor"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:fontFamily="sans-serif"
-              android:paddingLeft="20dp"/>
+              android:fontFamily="sans-serif-light"
+              android:textSize="11sp"
+              android:paddingLeft="10dp"/>
 		<LinearLayout
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
@@ -39,8 +43,9 @@
 			    android:layout_width="0dp"
 			    android:layout_height="wrap_content"
 			    android:layout_weight="1"
-			    android:fontFamily="sans-serif" 
-			    android:paddingLeft="20dp"/>
+                android:textSize="11sp"
+                android:fontFamily="sans-serif-light"
+			    android:paddingLeft="10dp"/>
 			    
 
 			<TextView
@@ -48,8 +53,8 @@
 			    android:layout_width="0dp"
 			    android:layout_height="wrap_content"
 			    android:layout_weight="3"
-			    android:fontFamily="sans-serif"
-			     />
+			    android:fontFamily="sans-serif-light"
+                android:textSize="11sp"/>
 
 		</LinearLayout>
     </LinearLayout>
