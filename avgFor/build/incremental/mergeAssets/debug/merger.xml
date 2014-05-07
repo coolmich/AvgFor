@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merger>
 
-    <dataSet config="19.0.1" >
-        <source path="/Users/Jacob/android_apps/avgcopy/avgFor/build/exploded-aar/com.android.support/appcompat-v7/19.0.1/assets" />
+    <dataSet config="19.1.0" >
+        <source path="/Users/White/Documents/Project/AvgFor/avgFor/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/assets" />
     </dataSet>
     <dataSet config="unspecified" >
-        <source path="/Users/Jacob/android_apps/avgcopy/avgFor/build/exploded-aar/avgcopy/library/unspecified/assets" />
+        <source path="/Users/White/Documents/Project/AvgFor/avgFor/build/exploded-aar/AvgFor/library/unspecified/assets" />
     </dataSet>
     <dataSet config="main" >
-        <source path="/Users/Jacob/android_apps/avgcopy/avgFor/src/main/assets" />
+        <source path="/Users/White/Documents/Project/AvgFor/avgFor/src/main/assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/Jacob/android_apps/avgcopy/avgFor/src/debug/assets" />
+        <source path="/Users/White/Documents/Project/AvgFor/avgFor/src/debug/assets" />
     </dataSet>
 
 </merger>

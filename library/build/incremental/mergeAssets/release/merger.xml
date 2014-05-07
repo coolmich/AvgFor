@@ -2,10 +2,10 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/Jacob/android_apps/avgcopy/library/src/main/assets" />
+        <source path="/Users/White/Documents/Project/AvgFor/library/src/main/assets" />
     </dataSet>
     <dataSet config="release" >
-        <source path="/Users/Jacob/android_apps/avgcopy/library/src/release/assets" />
+        <source path="/Users/White/Documents/Project/AvgFor/library/src/release/assets" />
     </dataSet>
 
 </merger>
