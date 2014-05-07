@@ -37,7 +37,7 @@ public class AFClassFragment extends ListFragment {
 		String id = getActivity().getIntent().getStringExtra(AFCourseFragment.EXTRA_NAME);
 		String url = CLASSURL.concat(id);
 		System.err.println(url);
-		new AFClassHttpTask().execute(url);		
+		new AFClassHttpGetTask().execute(url);
 	}
 	
 	public void updateListFromHttp(String result){
@@ -119,7 +119,7 @@ public class AFClassFragment extends ListFragment {
 		}	
 	}
 	
-	private class AFClassHttpTask extends AsyncTask<String, Integer, String>{
+	private class AFClassHttpGetTask extends AsyncTask<String, Integer, String>{
 		
 		@Override
 		protected String doInBackground(String... params) {
@@ -142,8 +142,25 @@ public class AFClassFragment extends ListFragment {
 			setListAdapter(adapter);
 	    }
 	}
+
+    private class AFClassHttpPostTask extends AsyncTask<String, Integer, String>{
+        @Override
+        protected String doInBackground(String... params){
+            InputStream input = AFGeneralHttpTask.postAddClass(params[0], params[1]);
+            try {
+                return AFGeneralHttpTask.convertInputStreamToString(input);
+            }catch (IOException e){
+                System.err.println("error in convert input stream to string");
+                e.printStackTrace();
+                return null;
+            }
+        }
+        protected void onPostExecute(String result){
+            System.err.println("Post request return such: "+result);
+        }
+    }
 	
-	public static class AFClassAlertDialogFragment extends DialogFragment{
+	public class AFClassAlertDialogFragment extends DialogFragment{
 		
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState){
@@ -160,6 +177,16 @@ public class AFClassFragment extends ListFragment {
 	               }).setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
 	                   public void onClick(DialogInterface dialog, int id) {
 	                       // FIRE ZE MISSILES!
+                           JSONObject jsObj = new JSONObject();
+                           try {
+                               jsObj.put("cls_id",mClass.getmId());
+                               jsObj.put("user_id","22");
+
+                           } catch (JSONException e) {
+                               e.printStackTrace();
+                               System.err.println("json created failed");
+                           }
+                           new AFClassHttpPostTask().execute("http://avgfor.com/api/together/create",jsObj.toString());
 	                	   System.err.println("yes clicked");
 	                   }
 	               });

@@ -4,7 +4,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class AFClass {
-	private String mId;
+
+    private String mId;
 	private String mSection;
 	private String mSectionId;
 	private String mDay;
@@ -42,7 +43,11 @@ public class AFClass {
 		}
 	}
 
-	/**
+    public String getmId() {
+        return mId;
+    }
+
+    /**
 	 * @return the section
 	 */
 	public String getSection() {
